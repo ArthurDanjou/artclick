@@ -12,6 +12,6 @@ export default class Link extends BaseModel {
   @column()
   public target: string;
 
-  @column()
+  @column({columnName: 'visit_count'})
   public visitCount: number;
 }

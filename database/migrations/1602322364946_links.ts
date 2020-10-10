@@ -8,7 +8,7 @@ export default class Links extends BaseSchema {
       table.increments('id').primary()
       table.string('code').notNullable()
       table.string('target').notNullable()
-      table.integer('visitCount').defaultTo(0)
+      table.integer('visit_count').defaultTo(0)
       table.timestamps(true)
     })
   }

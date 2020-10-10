@@ -1,14 +1,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 import HealthCheck from "@ioc:Adonis/Core/HealthCheck";
 
-Route.get('/ok', async ({ response}) => {
-  return response.ok('test');
-})
-
-Route.get('/bad', async ({ response}) => {
-  return response.badRequest('test');
-})
-
 Route.get('/', 'LinksController.getAllLinks') // --> Home
 Route.get('/:id', 'LinksController.getLink')
 Route.get('/:id/count', 'LinksController.getVisitCount')

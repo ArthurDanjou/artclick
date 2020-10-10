@@ -2,8 +2,8 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class UsersController {
 
-  public async login ({ params, auth, response }: HttpContextContract) {
-    await auth.use('web').attempt(params.email, params.password)
+  public async login ({ request, auth, response }: HttpContextContract) {
+    await auth.use('web').attempt(request.input('email'), request.input('password'))
     return response.ok('Successfuly logged in !')
   }
 

@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="" />
+    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="Update .gitignore">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.adonisrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.adonisrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/LinksController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/LinksController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/UsersController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/UsersController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/1601756649403_links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1602322364946_links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/kernel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/start/kernel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +47,23 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iN6hEgblxGrUhC3dPzIo1PynWa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebStormProjects" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -45,18 +88,54 @@
       <option name="presentableId" value="Default" />
       <updated>1601735820057</updated>
       <workItem from="1601735821139" duration="5236000" />
-      <workItem from="1601754360526" duration="2827000" />
+      <workItem from="1601754360526" duration="3583000" />
+      <workItem from="1601758018033" duration="808000" />
+      <workItem from="1601810038688" duration="2318000" />
+      <workItem from="1602064142568" duration="112000" />
+      <workItem from="1602318392973" duration="5275000" />
     </task>
+    <task id="LOCAL-00001" summary="Update .gitignore">
+      <created>1601758149501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601758149501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.json" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="491" y="171" key="SettingsEditor" timestamp="1601756825201">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="491" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601756825201" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1601758152040">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1601758152040" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1601736531868">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

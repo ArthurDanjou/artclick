@@ -5,25 +5,33 @@ import Redis from "@ioc:Adonis/Addons/Redis";
 
 export default class LinksController {
 
-  public async getLink ({request, params, response}: HttpContextContract) {
-    const link = await Link.query().where('code', params.code).firstOrFail()
+  public async getLink ({request, response}: HttpContextContract) {
+    const code = request.ctx?.params
+    const link = await Link.findBy('code', code)
 
     //Check if code exists
     if (link) {
       const ip = request.ip()
-      const getIpFromRedis = await Redis.get(`artclick:ip:${ip}:${link.code}`)
+      let getVisitCountFromRedis = await Number(Redis.get(`artclick/routes/${link.code}/visits`))
+      const getIpFromRedis = await Redis.get(`artclick/ip/${ip}/${link.code}`)
+
+      if (!getVisitCountFromRedis) {
+        getVisitCountFromRedis = link.visitCount || 0;
+      }
 
       //Check if ip is set in cache to not spam incrementation
       if (!getIpFromRedis) {
-        await Redis.set(`artclick:ip:${ip}:${link.code}`, Date.now(), 'ex', 3600)
+        getVisitCountFromRedis++
+        await Redis.set(`artclick/ip/${ip}/${link.code}`, Date.now(), 'ex', 3600)
+        await Redis.set(`artclick/routes/${link.code}/visits`, getVisitCountFromRedis)
         await link.merge({
-          visitCount: link.visitCount++
+          visitCount: getVisitCountFromRedis++
         }).save()
       }
 
       return response.redirect(link.target)
     }
-    return response.badRequest(`Code does not exist ! (${params.code}`)
+    return response.badRequest(`Code does not exist ! (${code}`)
   }
 
   public async getAllLinks({response}: HttpContextContract) {
@@ -31,8 +39,9 @@ export default class LinksController {
     return response.ok(links);
   }
 
-  public async getVisitCount({params}: HttpContextContract) {
-    const link = await Link.query().where('code', params.code).firstOrFail()
+  public async getVisitCount({request}: HttpContextContract) {
+    const code = request.ctx?.params
+    const link = await Link.query().where('code', code).firstOrFail()
 
     //Check if code exists
     if (link) {
@@ -41,14 +50,14 @@ export default class LinksController {
       }
     }
     return {
-      message: `Code does not exist ! (${params.code}`
+      message: `Code does not exist ! (${code}`
     }
   }
 
   public async createLink({request}: HttpContextContract) {
     const link = await Link.create(await request.validate(LinkValidator))
     return {
-      message: `Link successfully created : ${link}`
+      message: `Link successfully created : ${link.code} + ${link.target}`
     }
   }
 
