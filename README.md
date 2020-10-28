@@ -24,5 +24,5 @@ Hosted version: [**artclick.fr**](https://artclick.fr) *(Soon)*
  - GitHub : [@ArthurDanjou](https://github.com/ArthurDanjou)
 
 ## License 📑
-Copyright © 2020 - [@ArthurDanj](https://arthurdanjou.fr)
+Copyright © 2020 - [@ArthurDanj](https://arthurdanjou.fr) \
 This project is [MIT](https://github.com/ArthurDanjou/artclick/blob/master/License) Licensed.
