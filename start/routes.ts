@@ -26,5 +26,5 @@ Route
   .middleware('auth')
 
 Route.get('/', 'LinksController.getAllLinks') // --> Home
-Route.get('/:id', 'LinksController.getLink')
-Route.get('/:id/count', 'LinksController.getVisitCount')
+Route.get('/:id', 'LinksController.getLink') // --> Go to target's code
+Route.get('/:id/count', 'LinksController.getVisitCount') // --> Get Visit count's code
