@@ -1,25 +1,24 @@
 import {HttpContextContract} from '@ioc:Adonis/Core/HttpContext'
-import LinkValidator from "App/Validators/LinkValidator";
+import StoreValidator from "App/Validators/StoreValidator";
 import Link from "App/Models/Link";
 import Redis from "@ioc:Adonis/Addons/Redis";
+import UpdateValidator from "App/Validators/UpdateValidator";
 
 export default class LinksController {
 
-  public async getLink ({request, response}: HttpContextContract) {
-    const code = request.ctx?.params
-    const link = await Link.findBy('code', code)
+  public async getLink ({request, params, response}: HttpContextContract) {
+    const code = params.id
+    const link = await Link.findByOrFail('code', code)
 
-    //Check if code exists
-    if (link) {
+    if (link.code === code) {
       const ip = request.ip()
-      let getVisitCountFromRedis = await Number(Redis.get(`artclick/routes/${link.code}/visits`))
+      let getVisitCountFromRedis = await Number(Redis.get(`artclick/routes/${link.code}/visits`)) || 0
       const getIpFromRedis = await Redis.get(`artclick/ip/${ip}/${link.code}`)
 
       if (!getVisitCountFromRedis) {
-        getVisitCountFromRedis = link.visitCount || 0;
+        getVisitCountFromRedis = link.visitCount;
       }
 
-      //Check if ip is set in cache to not spam incrementation
       if (!getIpFromRedis) {
         getVisitCountFromRedis++
         await Redis.set(`artclick/ip/${ip}/${link.code}`, Date.now(), 'ex', 3600)
@@ -28,10 +27,9 @@ export default class LinksController {
           visitCount: getVisitCountFromRedis++
         }).save()
       }
-
       return response.redirect(link.target)
     }
-    return response.badRequest(`Code does not exist ! (${code}`)
+    return response.badRequest(`Code does not exist ! (/${code})`)
   }
 
   public async getAllLinks({response}: HttpContextContract) {
@@ -39,12 +37,12 @@ export default class LinksController {
     return response.ok(links);
   }
 
-  public async getVisitCount({request}: HttpContextContract) {
-    const code = request.ctx?.params
-    const link = await Link.query().where('code', code).firstOrFail()
+  public async getVisitCount({params}: HttpContextContract) {
+    const code = params.id
+    const link = await Link.findByOrFail('code', code)
 
     //Check if code exists
-    if (link) {
+    if (link.code === code) {
       return {
         count: link.visitCount
       }
@@ -55,19 +53,23 @@ export default class LinksController {
   }
 
   public async createLink({request}: HttpContextContract) {
-    const link = await Link.create(await request.validate(LinkValidator))
+    const link = await Link.create(await request.validate(StoreValidator))
     return {
       message: `Link successfully created : ${link.code} + ${link.target}`
     }
   }
 
-  public async updateLink ({params, response}: HttpContextContract) {
-    //Update link & reset to 0 the visit count
-    const link = await Link.query().where('code', params.code).firstOrFail()
-    if (link) {
-      await Link.query().update({target: params.target, visitCount: 0})
-    }
-    return response.badRequest(`Cannot updated Link : ${link} ! `)
+  public async updateLink ({request}: HttpContextContract) {
+    const link = await Link.findByOrFail('code', request.input('link'))
+    const data = await request.validate(UpdateValidator)
+    await link.merge(data).save()
+    return link
+  }
+
+  public async deleteLink ({request}: HttpContextContract) {
+    const code = request.input('code')
+    const link = await Link.findByOrFail('code', code)
+    await link.delete()
   }
 
 }

@@ -19,21 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="Update .gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.adonisrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.adonisrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="finishing the project">
+      <change afterPath="$PROJECT_DIR$/app/Validators/UpdateValidator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/Http/LinksController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/LinksController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/UsersController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/UsersController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/1601756649403_links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1602322364946_links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Validators/LinkValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Validators/StoreValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/redis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/redis.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/kernel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/start/kernel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebStormProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +71,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Users\arthu\Desktop\Workspace\artclick\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\arthu\Documents\Workspace\artclick\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,7 +87,11 @@
       <workItem from="1601758018033" duration="808000" />
       <workItem from="1601810038688" duration="2318000" />
       <workItem from="1602064142568" duration="112000" />
-      <workItem from="1602318392973" duration="5275000" />
+      <workItem from="1602318392973" duration="8314000" />
+      <workItem from="1602409381790" duration="42000" />
+      <workItem from="1602409480621" duration="3532000" />
+      <workItem from="1602424540314" duration="602000" />
+      <workItem from="1603909262873" duration="6707000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore">
       <created>1601758149501</created>
@@ -101,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601758149501</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finishing the project">
+      <created>1602324120553</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602324120553</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,17 +131,26 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
+    <MESSAGE value="finishing the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishing the project" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="166" key="#Plugins" timestamp="1602409434974">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="166" key="#Plugins/0.0.1920.1050@0.0.1920.1050" timestamp="1602409434974" />
     <state x="491" y="171" key="SettingsEditor" timestamp="1601756825201">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="491" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601756825201" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1601758152040">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1602324165784">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1601758152040" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324165784" />
+    <state x="742" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602324230972">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="742" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324230972" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1601736531868">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

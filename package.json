@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "node ace build",
-    "start": "node ace serve --watch"
+    "start": "node ace serve --watch",
+    "migration":  "node ace make:migration",
+    "seed": "node ace db:seed"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^2.0.0",

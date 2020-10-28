@@ -40,7 +40,11 @@ const redisConfig: RedisConfig = {
       port: Env.get('REDIS_PORT', '6379') as string,
       password: Env.get('REDIS_PASSWORD', '') as string,
       db: 0,
-      keyPrefix: '',
+      keyPrefix: 'artclick',
+      healthCheck: true,
+      maxRetriesPerRequest: 3,
+      connectTimeout: 5000,
+      
     },
   },
 }
