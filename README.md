@@ -29,8 +29,8 @@ Hosted version: [**artclick.fr**](https://artclick.fr) *(Soon)*
   - https://artclick.fr/options/delete ➡ Delete a shortened link
 - Links
   - https://artclick.fr/ ➡ Get all links with informations
-  - https://artclick.fr/<code> ➡ Redirect to the shortened link's target
-  - https://artclick.fr/<code>/count ➡ Get the shortened link's visit count
+  - https://artclick.fr/(code) ➡ Redirect to the shortened link's target
+  - https://artclick.fr/(code)/count ➡ Get the shortened link's visit count
 
 ## Author 👤
 ➡ Arthur Danjou : Developer
