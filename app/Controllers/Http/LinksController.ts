@@ -12,19 +12,14 @@ export default class LinksController {
 
     if (link.code === code) {
       const ip = request.ip()
-      let getVisitCountFromRedis = await Number(Redis.get(`artclick/routes/${link.code}/visits`)) || 0
+      let visitCount = link.visitCount
+
       const getIpFromRedis = await Redis.get(`artclick/ip/${ip}/${link.code}`)
 
-      if (!getVisitCountFromRedis) {
-        getVisitCountFromRedis = link.visitCount;
-      }
-
       if (!getIpFromRedis) {
-        getVisitCountFromRedis++
         await Redis.set(`artclick/ip/${ip}/${link.code}`, Date.now(), 'ex', 3600)
-        await Redis.set(`artclick/routes/${link.code}/visits`, getVisitCountFromRedis)
         await link.merge({
-          visitCount: getVisitCountFromRedis++
+          visitCount: visitCount++
         }).save()
       }
       return response.redirect(link.target)
@@ -32,12 +27,12 @@ export default class LinksController {
     return response.badRequest(`Code does not exist ! (/${code})`)
   }
 
-  public async getAllLinks({response}: HttpContextContract) {
+  public async getAllLinks ({response}: HttpContextContract) {
     const links = await Link.all()
     return response.ok(links);
   }
 
-  public async getVisitCount({params}: HttpContextContract) {
+  public async getVisitCount ({params}: HttpContextContract) {
     const code = params.id
     const link = await Link.findByOrFail('code', code)
 
@@ -52,7 +47,7 @@ export default class LinksController {
     }
   }
 
-  public async createLink({request}: HttpContextContract) {
+  public async createLink ({request}: HttpContextContract) {
     const link = await Link.create(await request.validate(StoreValidator))
     return {
       message: `Link successfully created : ${link.code} + ${link.target}`

@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="Fix all errors &amp; redis connection">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="Fix LICENSE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,14 @@
       <workItem from="1602409381790" duration="42000" />
       <workItem from="1602409480621" duration="3532000" />
       <workItem from="1602424540314" duration="602000" />
-      <workItem from="1603909262873" duration="8718000" />
+      <workItem from="1603909262873" duration="8882000" />
+      <workItem from="1604003845806" duration="31000" />
+      <workItem from="1604067844174" duration="79000" />
+      <workItem from="1604068040656" duration="57000" />
+      <workItem from="1604068710690" duration="7000" />
+      <workItem from="1604068804985" duration="107000" />
+      <workItem from="1604243253979" duration="53000" />
+      <workItem from="1607096780234" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore">
       <created>1601758149501</created>
@@ -109,7 +114,28 @@
       <option name="project" value="LOCAL" />
       <updated>1603918262830</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add License &amp; Add documentation">
+      <created>1603920104850</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603920104850</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix README.md">
+      <created>1603920160319</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603920160319</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix LICENSE">
+      <created>1603920207982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603920207982</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +161,10 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="finishing the project" />
     <MESSAGE value="Fix all errors &amp; redis connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix all errors &amp; redis connection" />
+    <MESSAGE value="Add License &amp; Add documentation" />
+    <MESSAGE value="Fix README.md" />
+    <MESSAGE value="Fix LICENSE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix LICENSE" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="166" key="#Plugins" timestamp="1602409434974">
@@ -150,15 +179,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="491" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601756825201" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603918270742">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603920211155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603918270742" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603920211155" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324165784" />
-    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603918314449">
+    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604003867720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603918314449" />
+    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604003867720" />
     <state x="742" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324230972" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1601736531868">
       <screen x="0" y="0" width="1920" height="1050" />

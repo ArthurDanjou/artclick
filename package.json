@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node ace build",
     "start": "node ace serve --watch",
-    "migration":  "node ace make:migration",
+    "mig": "node ace make:migration",
     "seed": "node ace db:seed"
   },
   "devDependencies": {
