@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="Fix LICENSE">
+    <list default="true" id="849f45e0-50d6-480f-9d66-0c0582ce7ac1" name="Default Changelist" comment="remove useless cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,10 @@
       <workItem from="1604068710690" duration="7000" />
       <workItem from="1604068804985" duration="107000" />
       <workItem from="1604243253979" duration="53000" />
-      <workItem from="1607096780234" duration="251000" />
+      <workItem from="1607096780234" duration="500000" />
+      <workItem from="1607097416779" duration="139000" />
+      <workItem from="1607097564666" duration="16000" />
+      <workItem from="1608053893312" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore">
       <created>1601758149501</created>
@@ -135,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603920207982</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="remove useless cache">
+      <created>1607097318729</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607097318729</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,34 +173,7 @@
     <MESSAGE value="Add License &amp; Add documentation" />
     <MESSAGE value="Fix README.md" />
     <MESSAGE value="Fix LICENSE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix LICENSE" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="166" key="#Plugins" timestamp="1602409434974">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="166" key="#Plugins/0.0.1920.1050@0.0.1920.1050" timestamp="1602409434974" />
-    <state x="635" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603919982599">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="635" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603919982599" />
-    <state x="491" y="171" key="SettingsEditor" timestamp="1601756825201">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="491" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601756825201" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603920211155">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603920211155" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324165784" />
-    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604003867720">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="742" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604003867720" />
-    <state x="742" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602324230972" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1601736531868">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1601736531868" />
+    <MESSAGE value="remove useless cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove useless cache" />
   </component>
 </project>

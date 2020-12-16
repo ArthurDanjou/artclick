@@ -39,4 +39,4 @@ Hosted version: [**artclick.fr**](https://artclick.fr) *(Soon)*
 
 ## License 📑
 Copyright © 2020 - [@ArthurDanj](https://arthurdanjou.fr) \
-This project is [MIT](https://github.com/ArthurDanjou/artclick/blob/master/License) Licensed.
+This project is [MIT](https://github.com/ArthurDanjou/artclick/blob/master/LICENSE) Licensed.
